@@ -6,13 +6,13 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:16:11 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/19 15:16:43 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/10/21 11:48:36 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower (int c)
+int	ft_tolower(int c)
 {
 	if ((c >= 'A') && (c <= 'Z'))
 		c += 32;
