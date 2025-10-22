@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:38:30 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/22 11:52:13 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/10/22 14:44:40 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char	*str2;
 	size_t			i;
 
+	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	if ((!str1[0] && !str2[0]) || (n == 0))

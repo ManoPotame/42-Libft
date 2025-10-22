@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:04:51 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/22 12:34:44 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/10/22 14:20:31 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,6 @@ char	*ft_strrchr(const char *s, int c);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
 void	*ft_memchr(const void *s, int c, size_t n);
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
 #endif
