@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:04:51 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/24 00:10:03 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/10/24 06:04:51 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ char		*ft_strnstr(const char *big, const char *little, size_t len);
 
 int			ft_atoi(const char *nptr);
 
-void	*ft_calloc(size_t nmemb, size_t size);
+void		*ft_calloc(size_t nmemb, size_t size);
+
+char 		*strdup(const char *s);
 #endif
