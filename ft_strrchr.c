@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 17:56:17 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/21 18:33:08 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/10/28 10:19:59 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	index = ft_strlen(s);
 	if ((char)c == '\0')
-	{
 		return ((char *)&s[index]);
-	}
 	while (index >= 0)
 	{
 		if (s[index] == (char)c)
