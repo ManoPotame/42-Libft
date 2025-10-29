@@ -1,6 +1,6 @@
 NAME = libft.a
 $(NAME) :
-	cc -c *.c
+	cc -c -g *.c
 	ar rcs $(NAME) *.o
 
 

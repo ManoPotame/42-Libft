@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 13:35:50 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/26 15:14:35 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/10/29 15:16:55 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	while (s[start + i] && i < len)
 		i++;
-	dest = malloc(sizeof(char) * (i + 1));
+	dest = ft_calloc(sizeof(char), (i + 1));
 	if (dest == 0)
 		return (NULL);
 	ft_strlcpy(dest, s + start, i + 1);

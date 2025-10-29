@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 00:09:07 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/24 05:51:29 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/10/29 17:42:02 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*tab;
 
+	if ((nmemb * size) / size != nmemb)
+		return (NULL);
 	if (nmemb == 0 || size == 0)
 	{
 		tab = malloc(0);

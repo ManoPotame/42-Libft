@@ -6,12 +6,11 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 18:59:08 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/28 11:29:51 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/10/28 12:55:54 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 char	*emptystring(void)
 {
