@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:11:02 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/01 16:52:18 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/02 12:11:23 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	**ft_split(char const *s, char c)
 	char			**array;
 	size_t			i;
 	char			*str;
-	const size_t	line_count = line_counter(skip_splitter(s, c), c);
+	const size_t	line_count = line_counter(skip_splitter((char *)s, c), c);
 
 	str = (char *)s;
 	i = 0;
