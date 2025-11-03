@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:04:51 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/02 12:22:17 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/03 10:27:08 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,5 @@ char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
