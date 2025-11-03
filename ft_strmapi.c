@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 12:19:24 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/02 13:37:59 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/03 10:00:32 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
+	if (!s)
+		return (NULL);
 	i = 0;
-	str = calloc(ft_strlen(s), sizeof(char));
+	str = malloc(ft_strlen(s) * sizeof(char) + 1);
 	if (str == 0)
 		return (NULL);
 	while (s[i])
 	{
-		str = f(i, s[i]);
+		str[i] = (*f)(i, s[i]);
+		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
-
