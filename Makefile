@@ -59,7 +59,6 @@ $(OBJDIR)%.o: %.c
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-
 clean:
 	rm -rf $(OBJDIR)
 
@@ -68,6 +67,8 @@ fclean: clean
 
 re: fclean $(NAME)
 
+bonus: $(OBJBONUS)
+	ar rcs $(NAME) $(OBJBONUS)
+
 all: $(NAME)
 
-bonus:
