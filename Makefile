@@ -1,3 +1,4 @@
+.PHONY = clean fclean re bonus all
 NAME = libft.a
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
@@ -34,41 +35,38 @@ SRC =	ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
 
-BONUS =	bonus/ft_lstnew.c \
-		bonus/ft_lstadd_front.c \
-		bonus/ft_lstsize.c \
-		bonus/ft_lstlast.c \
-		bonus/ft_lstadd_back.c \
-		bonus/ft_lstdelone.c \
-		bonus/ft_lstclear.c \
-		bonus/ft_lstiter.c \
-		bonus/ft_lstmap.c
+BONUS =	ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c
 
 CFLAGS = -Wall -Wextra -Werror
 
-OBJDIR = obj/
+OBJ = $(SRC:.c=.o)
 
-OBJ = $(addprefix $(OBJDIR), $(SRC:.c=.o))
+OBJBONUS = $(BONUS:.c=.o)
 
-OBJBONUS = $(addprefix $(OBJDIR), $(BONUS:.c=.o))
-
-$(OBJDIR)%.o: %.c
-	@mkdir -p $(dir $@)
+%.o: %.c
 	cc $(CFLAGS) $< -c -o $@
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 clean:
-	rm -rf $(OBJDIR)
+	rm -f $(OBJ) $(OBJBONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)
 
-bonus: $(OBJBONUS)
-	ar rcs $(NAME) $(OBJBONUS)
+bonus: $(OBJBONUS) $(OBJ)
+	ar rcs $(NAME) $(OBJ) $(OBJBONUS)
 
 all: $(NAME)
 

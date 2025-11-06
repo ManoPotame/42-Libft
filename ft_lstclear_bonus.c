@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/05 12:44:22 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/06 11:04:20 by mcrenn           ###   ########.fr       */
+/*   Created: 2025/11/05 12:45:28 by mcrenn            #+#    #+#             */
+/*   Updated: 2025/11/06 18:18:32 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	while (lst)
+	t_list	*nodeforward;
+
+	if (!*lst || !del)
+		return ;
+	while (*lst)
 	{
-		if (lst->next == NULL)
-		{
-			return (lst);
-		}
-		lst = lst->next;
+		nodeforward = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = nodeforward;
 	}
-	return (NULL);
 }
