@@ -6,7 +6,21 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:43:59 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/05 12:44:00 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/06 10:32:59 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft.h"
+
+int	ft_lstsize(t_list *lst)
+{
+	int	count;
+
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
+}
