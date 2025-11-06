@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:11:02 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/03 10:20:16 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/06 19:35:42 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*skip_splitter(char *str, char c)
 	size_t	i;
 
 	i = 0;
-	while (str[i] && str[i + 1] == c && str[i + 1] != '\0')
+	while (str[i] && str[i] == c && str[i + 1] != '\0')
 		i++;
 	if (str[i] == c && str[i] != 0)
 		i++;
