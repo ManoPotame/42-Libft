@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:44:45 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/06 16:29:53 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/06 16:38:10 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *start;
+	t_list	*start;
 
 	if (!new)
 		return ;

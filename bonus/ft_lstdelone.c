@@ -6,7 +6,15 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:45:07 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/05 12:45:07 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/06 16:53:23 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+	del(lst->content);
+	free(lst);
+}
 
