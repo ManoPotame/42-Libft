@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 12:19:24 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/03 10:00:32 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/09 00:41:00 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	if (!s)
+	if (!s || !(*f))
 		return (NULL);
 	i = 0;
 	str = malloc(ft_strlen(s) * sizeof(char) + 1);

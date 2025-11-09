@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:11:02 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/07 15:10:26 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/09 00:18:18 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ static size_t	line_counter(char const *s, char c)
 
 	i = 0;
 	count = 1;
+	if (!s[0])
+		return (0);
 	while (s[i])
 	{
 		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 			count++;
 		i++;
 	}
-	if (!s[0])
-		return (0);
 	return (count);
 }
 
@@ -48,7 +48,7 @@ static void	free_split(char **array, int i)
 	while (i >= 0)
 	{
 		free(array[i]);
-		i--;
+		--i;
 	}
 	free(array);
 }

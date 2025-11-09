@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:43:09 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/06 18:18:51 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/09 00:57:27 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;
 
-	head = NULL;
 	head = ft_calloc(1, sizeof(t_list));
 	if (!head)
 		return (NULL);

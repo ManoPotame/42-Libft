@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 17:52:59 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/14 11:18:40 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/08 23:55:48 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	index;
 
 	index = 0;
+	if (!s)
+		return (NULL);
 	while (index < n)
 	{
 		((char *)s)[index] = c;

@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:29:09 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/10/22 11:51:03 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/09 00:22:35 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	index;
 
+	if (!s)
+		return (NULL);
 	index = 0;
 	while (s[index])
 	{

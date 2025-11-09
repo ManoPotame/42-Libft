@@ -1,5 +1,6 @@
 .vscode
 libft.a
-obj
 a.out
 libft_tester
+*.o
+*main.c

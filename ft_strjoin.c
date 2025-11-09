@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 16:22:32 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/03 15:18:21 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/09 00:36:12 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	char	*dest;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	dest = ft_calloc(sizeof(char), (len + 1));
+	dest = ft_calloc((len + 1), sizeof(char));
 	if (dest == 0)
 		return (NULL);
 	ft_strlcat(dest, s1, ft_strlen(s1) + 1);
