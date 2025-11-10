@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 06:03:20 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/09 00:24:41 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/10 10:40:08 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *s)
 	char	*dest;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	dest = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!dest)
 		return (NULL);

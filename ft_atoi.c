@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 10:42:54 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/08 23:35:40 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/10 10:57:51 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	result = 0;
-	if (!nptr)
-		return (0);
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || (nptr[i] == 32))
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
