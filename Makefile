@@ -51,6 +51,8 @@ OBJ = $(SRC:.c=.o)
 
 OBJBONUS = $(BONUS:.c=.o)
 
+all: $(NAME)
+
 %.o: %.c
 	cc $(CFLAGS) $< -c -o $@
 
@@ -68,5 +70,4 @@ re: fclean $(NAME)
 bonus: $(OBJBONUS) $(OBJ)
 	ar rcs $(NAME) $(OBJ) $(OBJBONUS)
 
-all: $(NAME)
 

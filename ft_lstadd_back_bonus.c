@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:44:45 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/09 01:03:22 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/10 13:40:54 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*start;
-
 	if (!new || !lst)
 		return ;
 	if (!*lst)
@@ -23,10 +21,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	// Essaie d'utiliser lstlast !!
-	start = *lst;
-	while ((*lst)->next != NULL)
-		*lst = (*lst)->next;
-	(*lst)->next = new;
-	*lst = start;
+	ft_lstlast(*lst)->next = new;
 }

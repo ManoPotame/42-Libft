@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:11:02 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/09 00:18:18 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/10 14:29:21 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,18 @@ static size_t	line_counter(char const *s, char c)
 	return (count);
 }
 
-
 static void	free_split(char **array, int i)
 {
 	while (i >= 0)
 	{
 		free(array[i]);
+		*array = NULL;
 		--i;
 	}
 	free(array);
+	array = NULL;
 }
+
 static size_t	string_len(char const *s, char c)
 {
 	size_t	len;
@@ -90,12 +92,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (array);
 }
-
-
-// #include <stdio.h>
-// int main()
-// {
-// 	char **freak = ft_split("   TAAAAAAKE       OOOON     MEEEE   ", ' ');
-
-// 	printf("split: %p", freak);
-// }

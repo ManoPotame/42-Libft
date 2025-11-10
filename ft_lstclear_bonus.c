@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:45:28 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/06 18:18:32 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/10 13:57:42 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*nodeforward;
 
-	if (!*lst || !del)
+	if (!lst || !del)
 		return ;
 	while (*lst)
 	{
@@ -25,4 +25,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		free(*lst);
 		*lst = nodeforward;
 	}
+	*lst = NULL;
 }
