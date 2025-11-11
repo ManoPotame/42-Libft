@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:44:22 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/09 00:58:51 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/11 14:48:29 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (NULL);
 	while (lst)
 	{
 		if (lst->next == NULL)

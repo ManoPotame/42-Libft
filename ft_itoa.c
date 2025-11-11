@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 18:55:04 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/03 15:28:59 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/11 14:44:45 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_itoa(int n)
 {
 	char	*dest;
 
-	dest = ft_calloc(sizeof(char), strlenint(n) + 1);
+	dest = ft_calloc(strlenint(n) + 1, sizeof(char));
 	if (dest == 0)
 		return (NULL);
 	dest = fill_dest(n, strlenint(n) - 1, dest);

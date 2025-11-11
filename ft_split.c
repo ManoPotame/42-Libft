@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:11:02 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/10 14:29:21 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/11 14:59:59 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static char	*skip_splitter(char *str, char c)
 	size_t	i;
 
 	i = 0;
+	if (!str)
+		return (NULL);
 	while (str[i] && str[i] == c && str[i + 1] != '\0')
 		i++;
 	if (str[i] == c && str[i] != 0)
@@ -31,7 +33,7 @@ static size_t	line_counter(char const *s, char c)
 
 	i = 0;
 	count = 1;
-	if (!s[0])
+	if (!s || !s[0])
 		return (0);
 	while (s[i])
 	{
@@ -47,11 +49,9 @@ static void	free_split(char **array, int i)
 	while (i >= 0)
 	{
 		free(array[i]);
-		*array = NULL;
 		--i;
 	}
 	free(array);
-	array = NULL;
 }
 
 static size_t	string_len(char const *s, char c)
@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	str = (char *)s;
 	i = 0;
-	array = ft_calloc(sizeof(char *), line_count + 1);
+	array = ft_calloc(line_count + 1, sizeof(char *));
 	if (!array)
 		return (NULL);
 	while (i < line_count)
