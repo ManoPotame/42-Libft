@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 10:42:54 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/10 13:18:07 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/12 18:26:06 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_atoi(const char *nptr)
 	int	sign;
 	int	result;
 
+	if(!nptr)
+		return (0);
 	i = 0;
 	sign = 1;
 	result = 0;

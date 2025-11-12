@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 17:05:37 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/10 10:46:10 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/12 18:21:44 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	j;
 	size_t	ret;
 
+	if (!dest || !src)
+		return (0);
 	i = 0;
 	j = 0;
 	if (size == 0)

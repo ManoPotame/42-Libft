@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 11:29:56 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/07 11:04:02 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/12 18:19:20 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	index;
 
+	if (!dest || !src)
+		return (NULL);
 	index = 0;
 	while (index < n)
 	{

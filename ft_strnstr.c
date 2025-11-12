@@ -6,7 +6,7 @@
 /*   By: mcrenn <mcrenn@student.42angouleme.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 14:53:51 by mcrenn            #+#    #+#             */
-/*   Updated: 2025/11/10 10:54:51 by mcrenn           ###   ########.fr       */
+/*   Updated: 2025/11/12 18:25:18 by mcrenn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!big || !little)
+		return (NULL);
 	i = 0;
 	if (little[0] == '\0')
 		return ((char *)big);
