@@ -1,4 +1,3 @@
-.PHONY = clean fclean re bonus all
 NAME = libft.a
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
@@ -70,4 +69,4 @@ re: fclean $(NAME)
 bonus: $(OBJBONUS) $(OBJ)
 	ar rcs $(NAME) $(OBJ) $(OBJBONUS)
 
-
+.PHONY: clean fclean re bonus all
